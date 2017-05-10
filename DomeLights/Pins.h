@@ -18,4 +18,4 @@ const int STRIPS[][3] = {
 };
 
 // IR Reciever
-const int RECV_PIN = 24;
+const int RECV_PIN = 50;
