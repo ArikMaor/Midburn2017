@@ -1,3 +1,4 @@
+#include <Utility.h>
 #include <IRremote.h>
 #include <TimedAction.h>
 #include "Buttons.h"
@@ -23,14 +24,14 @@ IRrecv irrecv(RECV_PIN);
 unsigned int currentAction = 0;
 unsigned int stage = 0;
 
+void initStrip(int pins[3]) {
+  foreach(pins, 3, pinMode, OUTPUT);
+}
+
 void setup()
 {
-  pinMode(redPin, OUTPUT);
-  pinMode(grnPin, OUTPUT);
-  pinMode(bluPin, OUTPUT);
-  pinMode(redPin2, OUTPUT);
-  pinMode(grnPin2, OUTPUT);
-  pinMode(bluPin2, OUTPUT);
+  initStrip(STRIPS[0]);
+  initStrip(STRIPS[1]);
 
   irrecv.enableIRIn();
   

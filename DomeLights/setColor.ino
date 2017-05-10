@@ -1,11 +1,7 @@
-void setColor(int red, int green, int blue) {
-  analogWrite(redPin, red);
-  analogWrite(grnPin, green);
-  analogWrite(bluPin, blue);
+void setColor(int strip, int red, int green, int blue) {
+  int* pins = STRIPS[strip];
+  analogWrite(pins[0], red);
+  analogWrite(pins[1], green);
+  analogWrite(pins[2], blue);
 }
 
-void setColor2(int red, int green, int blue) {
-  analogWrite(redPin2, red);
-  analogWrite(grnPin2, green);
-  analogWrite(bluPin2, blue);
-}
