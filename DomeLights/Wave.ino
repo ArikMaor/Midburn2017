@@ -22,15 +22,3 @@
 //}
 //
 
-double EaseInOut(double x) {
-  double top;
-  double bot;
-
-  if (x>1) { x=x-1; }
-
-  top = x*x;
-  bot = (x*x) + ((1-x)*(1-x));
-
-  return (top/bot);
-}
-

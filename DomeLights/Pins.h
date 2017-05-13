@@ -19,5 +19,3 @@ const int STRIPS[][3] = {
   {RED_PIN_3, GREEN_PIN_3, BLUE_PIN_3}
 };
 
-// IR Reciever
-const int RECV_PIN = 46;

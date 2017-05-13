@@ -16,9 +16,10 @@ void setAll(int red, int green, int blue) {
   }
 }
 
-// h 0-360
-// s 0-100
-// v 0-100
+// string - string index
+// h - [0,1]
+// s - [0,1]
+// v - [0,1]
 void setHsv(int strip, double h, double s, double v) {
   double r, g, b;
 
