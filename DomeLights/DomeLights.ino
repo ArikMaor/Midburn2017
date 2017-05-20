@@ -27,9 +27,9 @@ const double STEP = 0.01;
 void loop() {
   for(double h=0; h<=1; h+=STEP) {
     for(int i=0; i<sizeof(STRIPS)/sizeof(int[3]); i++) {
-      setHsv(i, EaseInOut(h+(0.15*i)), 1, 0.5);
+      setHsv(i, EaseInOut(h+(0.15*i)), 1, 0.7);
     }
-    delay(100);
+    delay(50);
   }
 }
 
