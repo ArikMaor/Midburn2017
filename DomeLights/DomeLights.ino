@@ -31,8 +31,12 @@ void setup()
 }
 
 void loop () {
-  fadeAllColors();
-
+  #if defined(__AVR_ATmega2560__)
+    // Mega
+    fadeAllColors();
+  #else
+    // Uno
+  #endif
 //  for (double i=0; i<2; i+=0.10) {
 //    for(int strip=0; strip<NUMBER_OF_STRIPS; strip++) {
 //      if (i<1) {
