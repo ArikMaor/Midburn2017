@@ -16,6 +16,12 @@ void setAll(int red, int green, int blue) {
   }
 }
 
+void setAllHsv(float h, float s, float v) {
+  for (int st = 0; st < sizeof(STRIPS)/sizeof(int[3]); st++) {
+    setHsv(st, h, s, v);
+  }
+}
+
 // string - string index
 // h - [0,1]
 // s - [0,1]
